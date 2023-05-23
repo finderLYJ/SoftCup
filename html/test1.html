@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>菜单实例</title>
+  <style>
+    ul {
+      padding:0;
+      margin:0;
+      list-style: none;
+    }
+    .nav {
+      width: 120px;
+    }
+    .nav h2 {
+      margin:0;
+      font-size: 16px;
+      font-weight: normal;
+      padding: 0px 20px;
+      height: 40px;
+      line-height: 40px;
+      border:1px solid #999;
+      border-bottom:none;
+      background: #369;
+      cursor: pointer;
+    }
+    .nav ul {
+      border:1px solid #999;
+      height: 0px;
+      border-width:0px;
+      overflow: hidden;
+      transition:all .5s;
+
+    }
+    .nav ul.active {
+      height: 125px;
+      border-width: 1px;
+    }
+    .nav li a{
+      color:#333;
+      font-size: 14px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      padding: 0px 20px;
+      height: 30px;
+      line-height: 30px;
+      border-bottom:1px solid #999;
+    }
+    .nav li:last-child a {
+      border-bottom:none;
+    }
+  </style>
+</head>
+<body>
+<h1>后台管理</h1>
+<hr>
+
+<div class="nav">
+  <h2>用户管理</h2>
+  <ul>
+    <li><a href="#">用户列表</a></li>
+    <li><a href="#">用户添加</a></li>
+    <li><a href="#">用户删除</a></li>
+    <li><a href="#">用户修改</a></li>
+  </ul>
+
+  <h2>订单管理</h2>
+  <ul>
+    <li><a href="#">订单列表</a></li>
+    <li><a href="#">订单添加</a></li>
+    <li><a href="#">订单删除</a></li>
+    <li><a href="#">订单修改</a></li>
+  </ul>
+
+
+  <h2>商品管理</h2>
+  <ul>
+    <li><a href="#">用户列表</a></li>
+    <li><a href="#">用户添加</a></li>
+    <li><a href="#">用户删除</a></li>
+    <li><a href="#">用户修改</a></li>
+  </ul>
+
+  <h2>评论管理</h2>
+  <ul>
+    <li><a href="#">用户列表</a></li>
+    <li><a href="#">用户添加</a></li>
+    <li><a href="#">用户删除</a></li>
+    <li><a href="#">用户修改</a></li>
+  </ul>
+</div>
+<form action="/getdata" enctype='multipart/form-data' method='POST'>
+
+  <input type="submit" value="1" name="options" style="margin-top:15px;" onclick="click()"/>
+  <input type="submit" value="2" name="options" style="margin-top:15px;" onclick="click()"/>
+  <input type="submit" value="3" name="options" style="margin-top:15px;" onclick="click()"/>
+  <input type="submit" value="4" name="options" style="margin-top:15px;" onclick="click()"/>
+  <input type="submit" value="5" name="options" style="margin-top:15px;" onclick="click()"/>
+  <input type="submit" value="6" name="options" style="margin-top:15px;" onclick="click()"/>
+  <input type="submit" value="7" name="options" style="margin-top:15px;" onclick="click()"/>
+  <input type="submit" value="8" name="options" style="margin-top:15px;" onclick="click()"/>
+  <input type="submit" value="9" name="options" style="margin-top:15px;" onclick="click()"/>
+  <input type="submit" value="10" name="options" style="margin-top:15px;" onclick="click()"/>
+
+</form>
+<script src="../jquery-3.3.1.js"></script>
+<script>
+  $(function(){
+    $('.nav h2').on('click', function(){
+      $(this).next('ul').toggleClass('active')
+    })
+  })
+</script>
+</body>
+</html>

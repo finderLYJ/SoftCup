@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/bg.jpg");
+    background-size:cover;
+}
+@font-face {
+    font-family: electronicFont;
+    src: url("../font/DS-DIGIT.TTF");
+}
+.container {
+    color: white;
+    max-width: 34rem;
+    max-height: 15rem;
+    margin-left: 2rem;
+    padding: 0.5rem;
+}
+
+header {
+    /*background-color: #333;*/
+    /*color: #fff;*/
+    padding: 0.5rem 0;
+    /*background-image: url("../img/bg.jpg");*/
+    background: url(../img/head_bg.png) no-repeat top center;
+    background-size: 40rem 3rem;
+}
+header .showTime {
+    font-family: electronicFont, serif;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    line-height: 0.9375rem;
+    font-size: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+h1 {
+    margin: 0;
+    font-size: 0.6rem;
+}
+
+nav ul {
+    font-size: 0.3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 0.4rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 3rem 0;
+}
+
+section {
+    position: center;
+    padding-bottom: 0.5rem;
+    z-index: 10;
+}
+
+h2 {
+    display: inline-block;
+    margin: auto;
+    font-size:0.4rem;
+}
+#containerChart{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* 垂直居中对齐 */
+}
+#chartContainer {
+    width: 1rem;
+    height: 8rem;
+    border: 0.03rem solid #ccc;
+}
+#chartWeather{
+    width: 1rem;
+    height:8rem;
+    border: 0.03rem solid #ccc;
+}
+.chartItem {
+    text-align: center;
+    flex: 1;
+    margin-right: 0.4rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-right: 0.4rem;
+}
+
+table th, table td {
+    font-size:0.3rem;
+    border: 0.025rem solid #ccc;
+    padding: 0.2rem;
+}
+
+footer {
+    /*background-color: #f5f5f5;*/
+    padding: 0.5rem 0;
+    text-align: center;
+    background: url(../img/head_bg.png) no-repeat top center;
+    background-size: 33rem 2rem;
+    font-size: 0.03rem;
+}
+footer p{
+    font-size: 0.3rem;
+    text-align: center;
+}
+.map {
+    margin-left: 3rem;
+    position: relative;
+    height: 10.125rem;
+    z-index: 5;
+}
+.map .chart {
+    position: absolute;
+    top: 0;
+    left: 0rem;
+    /*z-index: 5;*/
+    height: 12.125rem;
+    width: 100%;
+}
+.map .map1,
+.map .map2,
+.map .map3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6.475rem;
+    height: 6.475rem;
+    background: url(../img/map.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.3;
+}
+.map .map2 {
+    width: 8.0375rem;
+    height: 8.0375rem;
+    background-image: url(../img/lbx.png);
+    opacity: 0.6;
+    animation: rotate 15s linear infinite;
+    z-index: 2;
+}
+.map .map3 {
+    width: 7.075rem;
+    height: 7.075rem;
+    background-image: url(../img/jt.png);
+    animation: rotate1 10s linear infinite;
+}
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes rotate1 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}

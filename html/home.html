@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>数据可视化网站</title>
+  <link rel="stylesheet" type="text/css" href="../css/css1.css">
+  <link rel="stylesheet" type="text/css" href="../css/css2.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>数据可视化网站</h1>
+    <nav>
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">联系方式</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="showTime">当前时间：2020年3月17-0时54分14秒</div>
+  <script>
+    var t = null;
+    t = setTimeout(time, 1000); //開始运行
+    function time() {
+      clearTimeout(t); //清除定时器
+      dt = new Date();
+      var y = dt.getFullYear();
+      var mt = dt.getMonth() + 1;
+      var day = dt.getDate();
+      var h = dt.getHours(); //获取时
+      var m = dt.getMinutes(); //获取分
+      var s = dt.getSeconds(); //获取秒
+      document.querySelector(".showTime").innerHTML =
+              "当前时间：" +
+              y +
+              "年" +
+              mt +
+              "月" +
+              day +
+              "-" +
+              h +
+              "时" +
+              m +
+              "分" +
+              s +
+              "秒";
+      t = setTimeout(time, 1000); //设定定时器，循环运行
+    }
+  </script>
+</header>
+<!-- 侧边栏 -->
+<div class="sidebar">
+  <input type="submit" value="一号机" name="options" class = "machine-link" onclick=click()></input>
+  <input type="submit" value="二号机" name="options" class = "machine-link" onclick=click()></input>
+  <input type="submit" value="三号机" name="options" class = "machine-link" onclick=click()></input>
+  <input type="submit" value="四号机" name="options" class = "machine-link" onclick=click()></input>
+  <input type="submit" value="五号机" name="options" class = "machine-link" onclick=click()></input>
+  <input type="submit" value="六号机" name="options" class = "machine-link" onclick=click()></input>
+  <input type="submit" value="七号机" name="options" class = "machine-link" onclick=click()></input>
+  <input type="submit" value="八号机" name="options" class = "machine-link" onclick=click()></input>
+  <input type="submit" value="九号机" name="options" class = "machine-link" onclick=click()></input>
+  <input type="submit" value="十号机" name="options" class = "machine-link" onclick=click()></input>
+</div>
+
+
+  <div class="map">
+<!--    <main>-->
+    <div class="chart"></div>
+    <div class="map1"></div>
+    <div class="map2"></div>
+    <div class="map3"></div>
+    <section id="chartSection">
+      <div class="container" id="containerChart">
+        <div class="chartItem" id="chartContainer">
+          <h2>数据可视化</h2>
+        </div>
+        <div class="chartItem"id="chartWeather">
+          <h2>天气预报</h2>
+        </div>
+      </div>
+    </section>
+    <section id="dataSection">
+      <div class="container">
+        <h2>数据表格</h2>
+        <table id="dataTable">
+          <thead>
+          <tr>
+            <th>日期</th>
+            <th>数值</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- 这里使用JavaScript动态生成数据行 -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+<!--</main>-->
+</div>
+
+<!-- 页面内容 -->
+<div class="content">
+  ..
+</div>
+<footer>
+  <div class="container">
+    <p>&copy; 2023 数据可视化网站. All rights reserved.</p>
+  </div>
+</footer>
+<script src="../js/flexible.js"></script>
+<script src="../js/js1.js"></script>
+<script src="../js/a-key.js"></script>
+</body>
+</html>
